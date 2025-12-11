@@ -13,13 +13,13 @@ export default function Productos() {
   // Modal
   const [mostrarModal, setMostrarModal] = useState(false);
   const [productoActual, setProductoActual] = useState(null);
-
+  const API = process.env.REACT_APP_API_URL;
   useEffect(() => {
-    fetch("http://localhost:3000/usuario")
+    fetch(`${API}/usuario`)
       .then((res) => res.json())
       .then((data) => setProductos(Array.isArray(data) ? data : []))
       .catch((error) => console.error("Error al cargar productos:", error));
-  }, []);
+  }, [API]);
 
   // FILTRO
   const productosFiltrados = productos.filter((p) =>
@@ -87,13 +87,14 @@ export default function Productos() {
       const esEdicion = Boolean(productoActual._id);
 
       const url = esEdicion
-        ? `http://localhost:3000/usuario/actualizar/${productoActual._id}`
-        : "http://localhost:3000/registro";
+        ? `${API}/usuario/actualizar/${productoActual._id}`
+        : `${API}/registro`;
 
       const method = esEdicion ? "PUT" : "POST";
 
       const res = await fetch(url, {
         method,
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
           Autorizacion: "Back " + (usuario?.token || ""),
@@ -178,9 +179,10 @@ export default function Productos() {
 
       try {
         const res = await fetch(
-          `http://localhost:3000/usuario/eliminar/${id}`,
+          `${API}/usuario/eliminar/${id}`,
           {
             method: "DELETE",
+            credentials: "include",
             headers: { Autorizacion: "Back " + (usuario?.token || "") },
           }
         );

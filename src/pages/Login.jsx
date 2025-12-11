@@ -12,7 +12,7 @@ const App = () => {
   const [mostrarRecuperacion, setMostrarRecuperacion] = useState(false);
   const [correoRecuperacion, setCorreoRecuperacion] = useState("");
   const [mensajeRecuperacion, setMensajeRecuperacion] = useState("");
-
+  const API = process.env.REACT_APP_API_URL;
 
   const validaciones = {
     usuario: {
@@ -34,7 +34,7 @@ const App = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:3000/login", {
+    fetch(`${API}/login`, {
       headers: { "Content-Type": "application/json" },
       method: "POST",
       body: JSON.stringify({
@@ -71,7 +71,7 @@ const App = () => {
       });
   };
   const enviarRecuperacion = () => {
-  fetch("http://localhost:3000/recuperar", {
+  fetch(`${API}recuperar`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ correo: correoRecuperacion }),

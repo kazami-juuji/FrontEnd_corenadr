@@ -23,7 +23,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider>
     <React.StrictMode>
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Inicio />} />

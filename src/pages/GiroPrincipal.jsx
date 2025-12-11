@@ -6,9 +6,9 @@ const Productores =() => {
   const [busqueda, setBusqueda] = useState("");
   const [paginaActual, setPaginaActual] = useState(1);
   const porPagina = 20;
-
+  const API = process.env.REACT_APP_API_URL;
   useEffect(() => {
-    fetch("http://localhost:3000/usuario")
+    fetch(`${API}/usuario`)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {
@@ -21,7 +21,7 @@ const Productores =() => {
         }
       })
       .catch((err) => console.log("Error:", err));
-  }, []);
+  }, [API]);
 
   // 🔹 Filtro por marca
   const filtrados = lista.filter((p) =>

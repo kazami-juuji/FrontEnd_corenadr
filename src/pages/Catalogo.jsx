@@ -6,9 +6,9 @@ export default function GrupoProducto() {
   const [busqueda, setBusqueda] = useState("");
   const [paginaActual, setPaginaActual] = useState(1);
   const porPagina = 15;
-
+  const API = process.env.REACT_APP_API_URL;
   useEffect(() => {
-    fetch("http://localhost:3000/usuario")
+    fetch(`${API}/usuarios`)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) setLista(data);
@@ -16,7 +16,7 @@ export default function GrupoProducto() {
         else setLista([]);
       })
       .catch((err) => console.log("Error:", err));
-  }, []);
+  }, [API]);
 
   const filtrados = lista.filter((p) =>
     `${p.producto} ${p.marca} ${p.giroPrincipal}`

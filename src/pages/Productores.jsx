@@ -6,9 +6,9 @@ export default function Productores() {
   const [busqueda, setBusqueda] = useState("");
   const [porPagina, setPorPagina] = useState(10); 
   const [paginaActual, setPaginaActual] = useState(1);
-
+  const API = process.env.REACT_APP_API_URL;
   useEffect(() => {
-    fetch("http://localhost:3000/usuario")
+    fetch(`${API}/usuario`)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {
@@ -25,7 +25,7 @@ export default function Productores() {
         }
       })
       .catch((err) => console.log("Error:", err));
-  }, []);
+  }, [API]);
 
   // 🔹 Eliminar repetidos
   const unicos = lista.filter(
