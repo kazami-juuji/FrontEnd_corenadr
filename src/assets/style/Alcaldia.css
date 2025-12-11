@@ -1,0 +1,61 @@
+.inicio {
+  padding: 30px;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.lista-alcaldias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.btn-alcaldia {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid #0051ff;
+  cursor: pointer;
+  background: white;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.btn-alcaldia:hover {
+  background: #e3edff;
+}
+
+.btn-alcaldia.activo {
+  background: #0051ff;
+  color: white;
+}
+
+.nombre-actual {
+  margin: 15px 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.mapa-bonito {
+  margin: auto;
+  width: 85%;
+  height: 420px;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  border: 3px solid #0051ff2a;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.18);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.mapa-bonito:hover {
+  transform: scale(1.01);
+}

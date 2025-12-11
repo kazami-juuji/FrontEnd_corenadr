@@ -1,0 +1,333 @@
+/* Importamos Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f4f6f8;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ============================================================
+   CONTENEDOR PRINCIPAL (AHORA CENTRADO + ESTILO ELEGANTE)
+   ============================================================ */
+.contenedor-tabla {
+  max-width: 1300px;           /* Ancho general del bloque */
+  margin: 40px auto;           /* CENTRAR completamente */
+  padding: 25px;               /* Espacio interno elegante */
+  background: white;
+  border-radius: 14px;         /* Esquinas redondeadas */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); /* Sombra premium */
+  overflow-x: auto;
+}
+
+/* ==========================================================================
+   BANNER
+   ========================================================================== */
+.banner-gobierno {
+  background: linear-gradient(90deg, #9d2449, #b73c5e);
+  color: white;
+  padding: 10px 18px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.banner-gobierno h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+.banner-gobierno p {
+  margin: 5px 0 0 0;
+  font-size: 15px;
+}
+
+/* ==========================================================================
+   TOOLBAR (BUSQUEDA + SELECT + BOTÓN AGREGAR)
+   ========================================================================== */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.toolbar input {
+  flex: 1;
+  min-width: 240px;
+  padding: 12px 14px;
+  border: 2px solid #9d2449;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.05);
+}
+
+.toolbar input:focus {
+  border-color: #b73c5e;
+  outline: none;
+  box-shadow: 0 0 6px rgba(157,36,73,0.4);
+}
+
+/* Selector */
+.selector-registros {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.selector-registros select {
+  padding: 8px 10px;
+  border: 2px solid #9d2449;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.2s ease;
+  cursor: pointer;
+
+  background-image: linear-gradient(45deg, transparent 50%, #9d2449 50%),
+                    linear-gradient(135deg, #9d2449 50%, transparent 50%);
+  background-position: calc(100% - 18px) calc(50% - 3px),
+                       calc(100% - 13px) calc(50% - 3px);
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.selector-registros select:hover {
+  border-color: #b73c5e;
+  box-shadow: 0 0 6px rgba(157,36,73,0.3);
+}
+
+/* Botón agregar */
+.btn-agregar {
+  background: #198754;
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-agregar:hover {
+  background: #157347;
+}
+
+/* ==========================================================================
+   TABLA
+   ========================================================================== */
+.tabla-gobierno {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  table-layout: fixed;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.tabla-gobierno thead th {
+  background-color: #006341;
+  color: white;
+  padding: 20px;
+  border: none;
+  font-size: 11px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tabla-gobierno td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tabla-gobierno tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tabla-gobierno tbody tr:hover {
+  background-color: #eef8f2;
+  transition: 0.2s;
+  border-left: 3px solid #9d2449;
+}
+
+/* Columna de acciones */
+.acciones {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Botones dentro de acciones */
+.acciones button {
+  padding:  14px;
+  font-size: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+}
+
+.btn-editar {
+  background: #0d6efd;
+  color: white;
+}
+
+.btn-editar:hover {
+  background: #0a58ca;
+}
+
+.btn-eliminar {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-eliminar:hover {
+  background: #b02a37;
+}
+
+/* ==========================================================================
+   PAGINACIÓN
+   ========================================================================== */
+.footer-tabla {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.paginacion {
+  display: flex;
+  gap: 6px;
+}
+
+.paginacion button {
+  border: 1px solid #ccc;
+  background: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.paginacion button:hover {
+  background: #e9ecef;
+}
+
+.paginacion .activo {
+  background: #006341;
+  color: white;
+  border-color: #006341;
+  font-weight: 600;
+}
+
+.paginacion .puntos {
+  padding: 6px 10px;
+  color: #888;
+}
+
+/* ==========================================================================
+   MODAL
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  width: 450px;
+  max-width: 90%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.modal-contenido input {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 6px 0 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.modal-contenido input:focus {
+  border-color: #9d2449;
+  box-shadow: 0 0 5px rgba(157,36,73,0.3);
+}
+
+.modal-botones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.btn-guardar {
+  background: #198754;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 5px;
+
+}
+
+.btn-cerrar {
+  background: #6c757d;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+}
+.modal-contenido {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  width: 500px;
+  max-width: 90%;
+  max-height: 80vh; /* Limita la altura */
+  overflow-y: auto; /* Scroll vertical solo en contenido */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+
+.form-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.columna label {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.columna input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+}
+
+.modal-dos-columnas {
+  width: 850px !important;
+}

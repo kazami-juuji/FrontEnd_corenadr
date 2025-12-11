@@ -1,0 +1,135 @@
+/* ====== CONTENEDOR GENERAL ====== */
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+/* ====== TÍTULO ====== */
+.titulo {
+  text-align: center;
+  color: #7A1622; /* Guinda */
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* ====== BUSCADOR + PAGINACIÓN ====== */
+.filtrosCabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.input-busqueda {
+  padding: 10px 15px;
+  border: 2px solid #7A1622;
+  border-radius: 10px;
+  width: 280px;
+  outline: none;
+}
+
+.input-busqueda:focus {
+  border-color: #D4AF37; /* Dorado */
+}
+
+/* ====== BOTONES PAGINACIÓN ====== */
+.paginacionTop button {
+  background: #7A1622;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+.paginacionTop button:disabled {
+  background: #b8b8b8;
+  cursor: not-allowed;
+}
+
+.paginacionTop span {
+  font-weight: bold;
+  margin: 0 10px;
+  color: #7A1622;
+}
+
+/* ====== FILTROS DE MESES ====== */
+.filtrosMeses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.filtrosMeses button {
+  padding: 10px 15px;
+  background: #E5E5E5;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.25s;
+}
+
+.filtrosMeses button:hover {
+  background: #C0C0C0;
+}
+
+.mesActivo {
+  background: #D4AF37 !important; /* DORADO */
+  border-color: #7A1622;
+  color: white !important;
+}
+
+.limpiar {
+  background: #7A1622 !important; /* Guinda */
+  color: white;
+}
+
+/* ====== GRID DE TARJETAS ====== */
+.grid-catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* ====== TARJETAS ====== */
+.card-catalogo {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #D4AF37;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: 0.25s;
+}
+
+.card-catalogo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.giroPrincipal {
+  color: #7A1622; /* GUINDA */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.marca {
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+.marca strong {
+  color: #D4AF37; /* DORADO */
+}
+/* Centrar el texto de la paginación */
+.paginacionTop {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 👈 Centrar */
+  gap: 10px; /* 👈 Separación entre botones y texto */
+  width: 100%;
+}

@@ -1,0 +1,147 @@
+:root {
+  --dorado: #d4af37;
+  --gris: #6b6b6b;
+  --vino: #9f2241;
+  --fondo: #fafafa;
+  --sombra: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: var(--sombra);
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+}
+
+/* TÍTULO */
+.titulo {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--vino);
+  margin-bottom: 20px;
+}
+
+/* INPUT DE BUSQUEDA */
+.input-busqueda {
+  padding: 12px 14px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s ease;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.03);
+}
+
+.input-busqueda:focus {
+  border-color: var(--dorado);
+  box-shadow: 0 0 6px rgba(212, 175, 55, 0.4);
+}
+
+/* TABLA */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+/* HEADER */
+.tabla thead {
+  background: var(--vino);
+  color: white;
+}
+
+.tabla th {
+  padding: 14px;
+  font-size: 1rem;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+/* FILAS */
+.tabla td {
+  padding: 14px;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  transition: 0.2s ease;
+}
+
+/* FILA HOVER */
+.tabla tbody tr:hover td {
+  background: #fbeff2; /* guinda pastel */
+}
+
+/* ÚLTIMA FILA SIN BORDE */
+.tabla tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 1.6rem;
+  }
+
+  .tabla th,
+  .tabla td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* SELECTOR DE REGISTROS POR PÁGINA */
+.selector {
+  appearance: none;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  width: 170px;
+  border-radius: 10px;
+  border: 2px solid var(--vino);
+  background: white;
+  color: var(--gris);
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+  /* Icono personalizado (flecha guinda dorada) */
+  background-image: linear-gradient(45deg, transparent 50%, var(--vino) 50%),
+                    linear-gradient(135deg, var(--vino) 50%, transparent 50%);
+  background-position: calc(100% - 18px) calc(50% - 3px),
+                       calc(100% - 13px) calc(50% - 3px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+/* HOVER */
+.selector:hover {
+  border-color: var(--dorado);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+/* FOCUS */
+.selector:focus {
+  outline: none;
+  border-color: var(--dorado);
+  background-color: #fff7da;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* CONTENEDOR DE FILTROS (SEARCH + SELECT JUNTOS) */
+.filtros {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
+}
