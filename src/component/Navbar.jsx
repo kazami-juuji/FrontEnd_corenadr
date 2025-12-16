@@ -17,7 +17,6 @@ const Navbar = () => {
       {/* NAVBAR PRINCIPAL */}
       <nav className="navbar navbar-expand-lg fixed-top product-navbar">
         <div className="container">
-          <img src="/img/logo.png" alt="Logo" width="50" height="50" className="me-2" />
           <NavLink className="navbar-brand" to="/">
             Productos del suelo de conservación de la CDMX 🌱
           </NavLink>

@@ -91,16 +91,6 @@ const Inicio = () => {
         <p>Conoce nuestros productos orgánicos y de calidad.</p>
         <a href="/Productos" className="btn-dorado">Ir a listado</a>
       </section>
-
-      <section className="features">
-        <div className="feature-card">🌱 </div>
-        <div className="feature-card">🥕</div>
-        <div className="feature-card">🚜 </div>
-      </section>
-
-
-
-
       {/* SECCIÓN "¿Qué es el Suelo de Conservación?" */}
       <section className="que-es py-5">
         <div className="container">
