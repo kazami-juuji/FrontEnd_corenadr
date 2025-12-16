@@ -36,6 +36,7 @@ const App = () => {
   const onSubmit = (data) => {
     fetch(`${API}/login`, {
       headers: { "Content-Type": "application/json" },
+      credentials: "include",
       method: "POST",
       body: JSON.stringify({
         administrador: data.usuario,
