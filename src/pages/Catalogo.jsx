@@ -8,7 +8,7 @@ export default function GrupoProducto() {
   const porPagina = 15;
   const API = process.env.REACT_APP_API_URL;
   useEffect(() => {
-    fetch(`${API}/usuarios`)
+    fetch(`${API}/usuario`)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) setLista(data);

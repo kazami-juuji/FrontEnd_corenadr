@@ -278,19 +278,19 @@ export default function Productos() {
         <tbody>
           {productosPagina.map((p) => (
             <tr key={p._id || p.productor}>
-              <td>{p.productor}</td>
-              <td>{p.marca}</td>
-              <td>{p.telefono1}</td>
-              <td>{p.telefono2}</td>
-              <td>{p.giroPrincipal}</td>
-              <td>{p.producto}</td>
-              <td>{p.presentación}</td>
-              <td>{p.poblado}</td>
-              <td>{p.alcaldía}</td>
-              <td>{p.paginaWeb}</td>
-              <td>{p.facebook}</td>
-              <td>{p.instagram}</td>
-              <td>{p.whatsapp}</td>
+              <td data-label="Productor">{p.productor}</td>
+              <td data-label="Marca">{p.marca}</td>
+              <td data-label="Teléfono 1">{p.telefono1}</td>
+              <td data-label="Teléfono 2">{p.telefono2}</td>
+              <td data-label="Giro">{p.giroPrincipal}</td>
+              <td data-label="Producto">{p.producto}</td>
+              <td data-label="Presentación">{p.presentación}</td>
+              <td data-label="Poblado">{p.poblado}</td>
+              <td data-label="Alcaldía">{p.alcaldía}</td>
+              <td data-label="Página Web">{p.paginaWeb}</td>
+              <td data-label="Facebook">{p.facebook}</td>
+              <td data-label="Instagram">{p.instagram}</td>
+              <td data-label="Whatsapp">{p.whatsapp}</td>
 
               {usuario && (
                 <td className="acciones">
